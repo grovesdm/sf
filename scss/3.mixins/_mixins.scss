@@ -1,0 +1,29 @@
+// Layout
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+// Colors
+@mixin colors($background, $color) {
+    background-color: $background;
+    color: $color;
+    a {
+        color: $color;
+    }
+}
+
+
+// ADD A DOTTED BORDER FOR DEV
+// USAGE: @include border(#000);
+@mixin border($color: $col-red-600) {
+    border: 2px dotted $color;
+}
+
+// Hiding shit
+@mixin hidden {
+    display: none;
+}
+

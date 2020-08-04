@@ -1,0 +1,87 @@
+@mixin button-base {
+  text-decoration: none;
+  padding: 0.5em 1em;
+  color: $col-white;
+  position: relative;
+  display: inline-block;
+  background-color: $col-black;
+  cursor: pointer;
+}
+
+.button9 {
+  background-color: $col-blue-200;
+}
+
+//VARS BACKGROUND COLOR, FOREGROUND COLOR, SIZE SM|MD|LG|XL
+
+@mixin button2($m-col-bg: $col-orange-500, $m-col-fg: $col-white) {
+  @include button-base;
+
+
+  border-radius: 5px;
+  //padding: 15px 50px;
+  font-size: 22px;
+  text-decoration: none;
+  //margin: 20px;
+  color: $m-col-fg;
+  position: relative;
+  display: inline-block;
+  background-color: $m-col-bg;
+  box-shadow: 0px 5px 0px 0px darken($m-col-bg, 10);
+  cursor: pointer;
+
+&:active {
+  transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+  &:hover {
+  background-color: transparentize($m-col-bg, 0.10);
+  }
+}
+
+@mixin button3 {
+  // backface-visibility: hidden;
+  // background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 3px solid pink;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  color: #fff !important;
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 600; // margin-top: 40px;
+  padding: 10px;
+  position: relative;
+  text-transform: uppercase;
+  transform: translateZ(0px);
+  transition-duration: 0.75s;
+  transition-property: color;
+  vertical-align: middle;
+  cursor: pointer;
+
+
+  &:before {
+    // What does this do?
+    /////////////////////
+    background: $site-color-highlight none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: 50% 0 0;
+    transition-duration: 0.5s;
+    transition-property: transform, -webkit-transform;
+    transition-timing-function: ease-out;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &:hover:before {
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+
+  }
+}
