@@ -1,0 +1,5 @@
+@use 'ssf/vars' as *;
+
+@mixin border($color: $col-red-600) {
+  border: 2px dotted $color;
+}

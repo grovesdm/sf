@@ -1,0 +1,19 @@
+// Layout
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+// Hiding shit
+@mixin hidden {
+    display: none;
+}
+
+
+

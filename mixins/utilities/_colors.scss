@@ -1,0 +1,9 @@
+@use 'ssf/vars' as *;
+
+@mixin colors($_bg: $col-white, $_fg: $col-black, $_links: $_fg){
+  background-color: $_bg;
+  color: $_fg;
+  a {
+    color: $_links;
+  }
+}

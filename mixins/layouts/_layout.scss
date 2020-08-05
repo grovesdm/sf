@@ -1,0 +1,21 @@
+@use '../../vars' as *;
+
+@mixin container($min-width: 240px, $max-width: 960px) {
+  width: 100%;
+  max-width: $max-width;
+  min-width: $min-width;
+  margin: 0 auto;
+}
+
+
+//
+//@mixin container-padding-tb {
+//  @include container;
+//  padding: $site-sizepadding 0;
+//}
+
+@mixin section($bg: $col-white, $fg: $col-black) {
+  width: 100%;
+  background-color: $bg;
+  color: $fg;
+}
