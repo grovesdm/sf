@@ -1,0 +1,290 @@
+//@use '../vars' as *;
+
+// https://tailwindcss.com/docs/customizing-colors
+
+%bg-black {
+background-color: #000000;
+}
+%bg-white {
+background-color: #FFFFFF;
+}
+
+%bg-gray-100 {
+  background-color: #F7FAFC;
+}
+%bg-gray-200 {
+  background-color: #EDF2F7;
+}
+%bg-gray-300 {
+  background-color: #E2E8F0;
+}
+%bg-gray-400 {
+  background-color: #CBD5E0;
+}
+%bg-gray-500 {
+  background-color: #A0AEC0;
+}
+%bg-gray-600 {
+  background-color: #718096;
+}
+%bg-gray-700 {
+  background-color: #4A5568;
+}
+%bg-gray-800 {
+  background-color: #2D3748;
+}
+%bg-gray-900 {
+  background-color: #1A202C;
+}
+
+%bg-red-100 {
+  background-color: #FFF5F5;
+}
+%bg-red-200 {
+  background-color: #FED7D7;
+}
+%bg-red-300 {
+  background-color: #FEB2B2;
+}
+%bg-red-400 {
+  background-color: #FC8181;
+}
+%bg-red-500 {
+  background-color: #F56565;
+}
+%bg-red-600 {
+  background-color: #E53E3E;
+}
+%bg-red-700 {
+  background-color: #C53030;
+}
+%bg-red-800 {
+  background-color: #9B2C2C;
+}
+%bg-red-900 {
+  background-color: #742A2A;
+}
+
+%bg-orange-100 {
+  background-color:#FFFAF0;
+}
+%bg-orange-200 {
+  background-color:#FEEBC8;
+}
+%bg-orange-300 {
+  background-color:#FBD38D;
+}
+%bg-orange-400 {
+  background-color:#F6AD55;
+}
+%bg-orange-500 {
+  background-color:#ED8936;
+}
+%bg-orange-600 {
+  background-color:#DD6B20;
+}
+%bg-orange-700 {
+  background-color:#C05621;
+}
+%bg-orange-800 {
+  background-color:#9C4221;
+}
+%bg-orange-900 {
+  background-color:#7B341E;
+}
+
+%bg-yellow-100 {
+  background-color: #FFFFF0;
+}
+%bg-yellow-200 {
+  background-color: #FEFCBF;
+}
+%bg-yellow-300 {
+  background-color: #FAF089;
+}
+%bg-yellow-400 {
+  background-color: #F6E05E;
+}
+%bg-yellow-500 {
+  background-color: #ECC94B;
+}
+%bg-yellow-600 {
+  background-color: #D69E2E;
+}
+%bg-yellow-700 {
+  background-color: #B7791F;
+}
+%bg-yellow-800 {
+  background-color: #975A16;
+}
+%bg-yellow-900 {
+  background-color: #744210;
+}
+
+%bg-green-100 {
+  background-color: #F0FFF4;
+}
+%bg-green-200 {
+  background-color: #C6F6D5;
+}
+%bg-green-300 {
+  background-color: #9AE6B4;
+}
+%bg-green-400 {
+  background-color: #68D391;
+}
+%bg-green-500 {
+  background-color: #48BB78;
+}
+%bg-green-600 {
+  background-color: #38A169;
+}
+%bg-green-700 {
+  background-color: #2F855A;
+}
+%bg-green-800 {
+  background-color: #276749;
+}
+%bg-green-900 {
+  background-color: #22543D;
+}
+
+%bg-teal-100 {
+  background-color: #E6FFFA;
+}
+%bg-teal-200 {
+  background-color: #B2F5EA;
+}
+%bg-teal-300 {
+  background-color: #81E6D9;
+}
+%bg-teal-400 {
+  background-color: #4FD1C5;
+}
+%bg-teal-500 {
+  background-color: #09c9c3;
+}
+%bg-teal-600 {
+  background-color: #319795;
+}
+%bg-teal-700 {
+  background-color: #2C7A7B;
+}
+%bg-teal-800 {
+  background-color: #285E61;
+}
+%bg-teal-900 {
+  background-color: #234E52;
+}
+
+%bg-blue-100 {
+  background-color: #EBF8FF;
+}
+%bg-blue-200 {
+  background-color: #BEE3F8;
+}
+%bg-blue-300 {
+  background-color: #90CDF4;
+}
+%bg-blue-400 {
+  background-color: #63B3ED;
+}
+%bg-blue-500 {
+  background-color: #4299E1;
+}
+%bg-blue-600 {
+  background-color: #3182CE;
+}
+%bg-blue-700 {
+  background-color: #2B6CB0;
+}
+%bg-blue-800 {
+  background-color: #2C5282;
+}
+%bg-blue-900 {
+  background-color: #2A4365;
+}
+
+%bg-indigo-100 {
+  background-color: #EBF4FF;
+}
+%bg-indigo-200 {
+  background-color: #C3DAFE;
+}
+%bg-indigo-300 {
+  background-color: #A3BFFA;
+}
+%bg-indigo-400 {
+  background-color: #7F9CF5;
+}
+%bg-indigo-500 {
+  background-color: #667EEA;
+}
+%bg-indigo-600 {
+  background-color: #5A67D8;
+}
+%bg-indigo-700 {
+  background-color: #4C51BF;
+}
+%bg-indigo-800 {
+  background-color: #434190;
+}
+%bg-indigo-900 {
+  background-color: #3C366B;
+}
+
+%bg-purple-100 {
+  background-color: #FAF5FF;
+}
+%bg-purple-200 {
+  background-color: #E9D8FD;
+}
+%bg-purple-300 {
+  background-color: #D6BCFA;
+}
+%bg-purple-400 {
+  background-color: #B794F4;
+}
+%bg-purple-500 {
+  background-color: #9F7AEA;
+}
+%bg-purple-600 {
+  background-color: #805AD5;
+}
+%bg-purple-700 {
+  background-color: #6B46C1;
+}
+%bg-purple-800 {
+  background-color: #553C9A;
+}
+%bg-purple-900 {
+  background-color: #44337A;
+}
+
+%bg-pink-100 {
+  background-color: #FFF5F7;
+}
+%bg-pink-200 {
+  background-color: #FED7E2;
+}
+%bg-pink-300 {
+  background-color: #FBB6CE;
+}
+%bg-pink-400 {
+  background-color: #F687B3;
+}
+%bg-pink-500 {
+  background-color: #ED64A6;
+}
+%bg-pink-600 {
+  background-color: #D53F8C;
+}
+%bg-pink-700 {
+  background-color: #B83280;
+}
+%bg-pink-800 {
+  background-color: #97266D;
+}
+%bg-pink-900 {
+  background-color: #702459;
+}

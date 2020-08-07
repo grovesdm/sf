@@ -3,3 +3,11 @@
 @mixin border($color: $col-red-600) {
   border: 2px dotted $color;
 }
+
+@mixin box-shadow($top: 0, $left: 0, $blur: 1rem, $color: $col-gray-500, $inset:"") {
+  box-shadow: $top $left $blur $color unquote($inset)
+}
+
+//@mixin box-shadow($size: 0, $left: 0, $blur: 1rem, $color: $col-gray-500, $inset:"") {
+//  box-shadow: $top $left $blur $color unquote($inset)
+//}

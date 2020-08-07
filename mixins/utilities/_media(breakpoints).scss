@@ -20,21 +20,9 @@
 ///  $breakpoints: ('phone': 320px);
 ///
 $breakpoints: (
-        'phone-sm-p': 280px,
-        'phone-md-p': 375px,
-        'phone-lg-p': 411px,
-        'phone-sm-l': 600px,
-        'phone-md-l': 736px,
-        'phone-lg-l': 812px,
-        'tablet-sm-p': 450px,
-        'tablet-md-p': 768px,
-        'tablet-lg-p': 1024px,
-        'tablet-sm-l': 600px,
-        'tablet-md-l': 1024px,
-        'tablet-lg-l': 1366px,
-        'pc-sm': 1280px,
-        'pc-md': 1366px,
-        'pc-xl': 1920px
+        'phone': 411px,
+        'tablet': 768px,
+        'pc': 1024px
 ) !default;
 
 ///

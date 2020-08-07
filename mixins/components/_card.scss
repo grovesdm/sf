@@ -1,23 +1,5 @@
 @use '../../vars' as *;
 
-@mixin image-clip($clip:"") {
-  @if $clip == 'start' {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%) //<-- USE ON IMG CLASS - CLIP START
-  } @else {
-    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%) //<-- USE ON IMG CLASS - CLIP END
-  }
-}
-
-
-@mixin box-shadow($top: 0, $left: 0, $blur: 1em, $color: $col-black, $inset:"") {
-  box-shadow: $top $left $blur $color unquote($inset)
-}
-
-.poop {
-  background-color: orange;
-}
-
-
 @mixin card-img($size: s, $radius: 0) {
   // @include card-img($size: 10, $radius: 0, $bg: $col-white, $fg: $col-black);
   //.card-img {
@@ -38,7 +20,6 @@
   //}
   .card-img {
     border-radius: $radius;
-    @include box-shadow();
     &__image {
       height: 50px;
       width: 100%;

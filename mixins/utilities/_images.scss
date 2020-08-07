@@ -1,0 +1,15 @@
+
+
+@mixin image-clip($clip:"", $amount: 96%) {
+  @if $clip == 'bottom-left' {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 $amount) //<-- USE ON IMG CLASS - CLIP START
+  } @else if $clip == 'bottom-right'{
+    clip-path: polygon(0 0, 100% 0, 100% $amount, 0 100%) //<-- USE ON IMG CLASS - CLIP END
+  } @else if $clip == 'right-bottom'{
+  clip-path: polygon(0 0, 100% 0, $amount 100%, 0 100%) //<-- USE ON IMG CLASS - CLIP END
+}
+
+  @else if $clip == 'right-top'{
+    clip-path: polygon(0 0, $amount 0, 100% 100%, 0 100%) //<-- USE ON IMG CLASS - CLIP END
+  }
+}

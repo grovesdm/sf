@@ -5,6 +5,7 @@ h3,
 h4,
 h5,
 h6,
+hr,
 ul,
 li,
 p,
@@ -54,15 +55,18 @@ video {
   max-width: 100%;
 }
 
-html,body { 
-    height: 100%;
+html, body {
+  height: 100%;
 }
+
 img {
-    max-width: 100%;
-    height: auto;
-     margin: 0;
-    display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  display: block;
 }
+
 figure {
   margin: 0;
 }
