@@ -8,33 +8,33 @@
 
 
 @mixin u-text-left { text-align: left !important; }
-.u-text-center { text-align: center !important; }
-.u-text-right { text-align: right !important; }
+%u-text-center { text-align: center !important; }
+%u-text-right { text-align: right !important; }
 
-.u-padding {
+%u-padding {
   padding: 0 1em;
 }
 
-.u-hide-st-med {
+%u-hide-st-med {
   @media (max-width: 599px) {
     display: none !important;
   }
 }
 
-.u-hide-bp-med {
+%u-hide-bp-med {
   @media (min-width: 600px) {
     display: none !important;
   }
 }
 
-//.u-is-hidden-on-mobile {
+//%u-is-hidden-on-mobile {
 //  @include media('<=phone') {
 //    display: none;
 //
 //  }
 //}
 //
-//.u-is-visible-on-mobile {
+//%u-is-visible-on-mobile {
 //  @include media('>phone') {
 //    display: none;
 //
