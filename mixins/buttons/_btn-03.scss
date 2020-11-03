@@ -1,0 +1,41 @@
+@use "../../vars" as *;
+@use "btn-00" as base;
+
+@mixin btn-03(
+  $bg: base.$bg,
+  $fg: base.$fg
+) {
+  @include base.btn-00();
+  backface-visibility: hidden;
+  background-color: transparent;
+  //background-color: transparentize($bg, 0.70); //<-- BACKGROUND VARIATION
+  color: $fg;
+  border: 2px solid $bg;
+  box-shadow: 0 0 1px $col-black;
+  transform: translateZ(0px);
+  transition-duration: 0.75s;
+  transition-property: color;
+
+  &:before {
+    background: $bg none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: 50% 0 0;
+    transition-duration: 0.5s;
+    transition-property: transform, -webkit-transform;
+    transition-timing-function: ease-out;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &:hover:before {
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  }
+}
+

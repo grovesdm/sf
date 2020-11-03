@@ -1,0 +1,39 @@
+@use "../../vars" as *;
+@use "../../placeholders" as *;
+@use "btn-00" as base;
+@use "btn" as *;
+
+
+
+@mixin btn-01(
+  $bg: $col-black,
+  $fg: $col-white
+) {
+  @extend %btn;
+  background-color: $bg;
+  color: $fg;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 1em;
+  position: relative;
+  text-decoration: none;
+
+  &:active {
+    // ADD SOME MOVEMENT FOR SATISFYING CLICK
+    transform: translate(
+                    0, //<-- POSITIVE VALUE IS RIGHT
+                    1px //<-- POSITIVE VALUE IS DOWN
+    );
+    box-shadow: 0 //<-- POSITIVE VALUE IS RIGHT
+    0 //<-- POSITIVE VALUE IS DOWN
+    3px //<-- SIZE
+    0 //<-- SPREAD RADIUS
+    $bg;
+  }
+
+  &:hover {
+    // ADD SOME MOVEMENT TO SHOW ITS A BUTTON
+    background-color: transparentize($bg, 0.10);
+  }
+}
+

@@ -1,0 +1,24 @@
+@use "../../vars" as *;
+@use "btn-00" as base;
+
+@mixin btn-05(
+  $bg: base.$bg,
+  $fg: base.$fg
+) {
+
+  @extend %btn;
+  background-color: $bg;
+  color: $fg;
+  border-radius: 3px;
+
+  &:active {
+    background-color: $bg;
+    color: $fg;
+  }
+
+  &:hover {
+    //background-color: $bg;
+    //color: $fg;
+    box-shadow: 0 0 0 1px $bg;
+  }
+}

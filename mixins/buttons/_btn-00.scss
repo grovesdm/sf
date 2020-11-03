@@ -1,0 +1,22 @@
+@use "../../vars" as *;
+@use "btn" as *;
+//////////////////////////////////////////////////
+// BUTTON DEFAULT VARS ///////////////////////////
+//////////////////////////////////////////////////
+$bg: $col-black;
+$fg: $col-white;
+
+@mixin btn-00(
+  $bg: $bg,
+  $fg: $fg
+) {
+  @extend %btn;
+  background-color: $bg;
+  color: $fg;
+
+  &:active { }
+
+  &:hover {
+  }
+}
+
