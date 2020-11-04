@@ -6,4 +6,12 @@
   a {
     color: $_links;
   }
+
+  //EXPERIMENTAL
+  &:active,
+  &:hover {
+    background-color: $_bg;
+    color: $_fg;
+  }
+
 }
