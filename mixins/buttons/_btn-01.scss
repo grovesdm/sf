@@ -1,6 +1,4 @@
 @use "../../vars" as *;
-@use "../../placeholders" as *;
-@use "btn-00" as base;
 @use "btn" as *;
 
 
@@ -37,3 +35,22 @@
   }
 }
 
+//.btn-01--primary {
+//  @include btn-01();
+//}
+//
+//.btn-01--secondary {
+//  @include btn-01($col-gray-600);
+//}
+//
+//.btn-01--success {
+//  @include btn-01($col-success);
+//}
+//
+//.btn-01--warning {
+//  @include btn-01($col-warning);
+//}
+//
+//.btn-01--alert {
+//  @include btn-01($col-alert);
+//}

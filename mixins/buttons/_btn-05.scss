@@ -1,9 +1,9 @@
 @use "../../vars" as *;
-@use "btn-00" as base;
+@use "btn" as *;
 
 @mixin btn-05(
-  $bg: base.$bg,
-  $fg: base.$fg
+  $bg: $col-purple-500,
+  $fg: $col-white
 ) {
 
   @extend %btn;
@@ -20,5 +20,32 @@
     //background-color: $bg;
     //color: $fg;
     box-shadow: 0 0 0 1px $bg;
+
+  }
+}
+
+
+
+.btn-05 {
+  @include btn-05;
+
+  &--primary {
+    @include btn-05($col-black, $col-white);
+  }
+
+  &--secondary {
+    @include btn-05($col-gray-800, $col-white);
+  }
+
+  &--success {
+    @include btn-05($col-success, $col-white);
+  }
+
+  &--warning {
+    @include btn-05($col-warning, $col-white);
+  }
+
+  &--alert {
+    @include btn-05($col-alert, $col-white);
   }
 }
