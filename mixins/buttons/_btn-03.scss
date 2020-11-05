@@ -1,14 +1,15 @@
 @use "../../vars" as *;
-@use "btn-00" as base;
+@use "btn" as *;
 
 @mixin btn-03(
-  $bg: base.$bg,
-  $fg: base.$fg
+  $bg: $col-black,
+  $fg: $col-white
 ) {
-  @include base.btn-00();
+
+  @extend %btn;
   backface-visibility: hidden;
-  background-color: transparent;
-  //background-color: transparentize($bg, 0.70); //<-- BACKGROUND VARIATION
+  //background-color: transparent; //<-- BACKGROUND VARIATION
+  background-color: transparentize($bg, 0.70); //<-- BACKGROUND VARIATION
   color: $fg;
   border: 2px solid $bg;
   box-shadow: 0 0 1px $col-black;
@@ -36,6 +37,32 @@
   &:hover:before {
     transform: scaleX(1);
     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  }
+}
+
+
+
+.btn-03 {
+  @include btn-03;
+
+  &--primary {
+    @include btn-03($col-black, $col-white);
+  }
+
+  &--secondary {
+    @include btn-03($col-gray-800, $col-white);
+  }
+
+  &--success {
+    @include btn-03($col-success, $col-white);
+  }
+
+  &--warning {
+    @include btn-03($col-warning, $col-white);
+  }
+
+  &--alert {
+    @include btn-03($col-alert, $col-white);
   }
 }
 

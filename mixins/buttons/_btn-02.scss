@@ -1,12 +1,12 @@
 @use "../../vars" as *;
-@use "btn-00" as base;
+@use "btn" as *;
 
 @mixin btn-02(
-  $bg: base.$bg,
-  $fg: base.$fg
+  $bg: $col-gray-800,
+  $fg: $col-white
 ) {
   //EXTEND THE BASE BUTTON
-  @include base.btn-00();
+  @extend %btn;
   background-color: $bg;
   color: $fg;
   border-radius: 5px;
@@ -22,3 +22,29 @@
     background-color: transparentize($bg, 0.10);
   }
 }
+
+
+.btn-02 {
+  @include btn-02;
+
+  &--primary {
+    @include btn-02($col-blue-700, $col-white);
+  }
+
+  &--secondary {
+    @include btn-02($col-gray-600, $col-white);
+  }
+
+  &--success {
+    @include btn-02($col-success, $col-white);
+  }
+
+  &--warning {
+    @include btn-02($col-warning, $col-white);
+  }
+
+  &--alert {
+    @include btn-02($col-alert, $col-white);
+  }
+}
+

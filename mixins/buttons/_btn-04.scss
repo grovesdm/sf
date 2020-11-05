@@ -1,13 +1,13 @@
 @use "../../vars" as *;
-@use "btn-00" as base;
+@use "btn" as *;
 
 @mixin btn-04(
-  $bg: base.$bg,
-  $fg: base.$fg,
+  $bg: $col-black,
+  $fg: $col-white,
   $bg-page: $col-white
 ) {
 
-  @include base.btn-00();
+  @extend %btn;
   background-color: $bg;
   color: $fg;
   &:active {
@@ -16,5 +16,29 @@
 
   &:hover {
     box-shadow: 0 0 0 2px $bg-page, 0 0 0 4px $bg;
+  }
+}
+
+.btn-04 {
+  @include btn-04;
+
+  &--primary {
+    @include btn-04($col-black, $col-white);
+  }
+
+  &--secondary {
+    @include btn-04($col-gray-800, $col-white);
+  }
+
+  &--success {
+    @include btn-04($col-success, $col-white);
+  }
+
+  &--warning {
+    @include btn-04($col-warning, $col-white);
+  }
+
+  &--alert {
+    @include btn-04($col-alert, $col-white);
   }
 }
