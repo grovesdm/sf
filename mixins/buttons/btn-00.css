@@ -1,0 +1,98 @@
+
+.btn--alert,.btn--primary,.btn--secondary,.btn--success,.btn--warning,.btn {
+	cursor: pointer;
+	display: inline-block;
+	padding: .5em 1em;
+	position: relative;
+	text-decoration: none
+}
+
+.btn--primary {
+	background-color: #000;
+	color: #f5f5f5
+}
+
+.btn--primary:active {
+	transform: translateY(1px);
+	box-shadow: 0 0 3px 0 #000
+}
+
+.btn--primary:hover {
+	background-color: rgba(0,0,0,.9)
+}
+
+.btn--secondary {
+	background-color: #718096;
+	color: #f5f5f5;
+	cursor: pointer;
+	display: inline-block;
+	padding: .5em 1em;
+	position: relative;
+	text-decoration: none
+}
+
+.btn--secondary:active {
+	transform: translateY(1px);
+	box-shadow: 0 0 3px 0 #718096
+}
+
+.btn--secondary:hover {
+	background-color: rgba(113,128,150,.9)
+}
+
+.btn--success {
+	background-color: #48bb78;
+	color: #f5f5f5;
+	cursor: pointer;
+	display: inline-block;
+	padding: .5em 1em;
+	position: relative;
+	text-decoration: none
+}
+
+.btn--success:active {
+	transform: translateY(1px);
+	box-shadow: 0 0 3px 0 #48bb78
+}
+
+.btn--success:hover {
+	background-color: rgba(72,187,120,.9)
+}
+
+.btn--warning {
+	background-color: #dd6b20;
+	color: #f5f5f5;
+	cursor: pointer;
+	display: inline-block;
+	padding: .5em 1em;
+	position: relative;
+	text-decoration: none
+}
+
+.btn--warning:active {
+	transform: translateY(1px);
+	box-shadow: 0 0 3px 0 #dd6b20
+}
+
+.btn--warning:hover {
+	background-color: rgba(221,107,32,.9)
+}
+
+.btn--alert {
+	background-color: #c53030;
+	color: #f5f5f5;
+	cursor: pointer;
+	display: inline-block;
+	padding: .5em 1em;
+	position: relative;
+	text-decoration: none
+}
+
+.btn--alert:active {
+	transform: translateY(1px);
+	box-shadow: 0 0 3px 0 #c53030
+}
+
+.btn--alert:hover {
+	background-color: rgba(197,48,48,.9)
+}
