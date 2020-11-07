@@ -3,5 +3,5 @@
 
 .table-00 {
   //@extend %table;
-  @include table($col-pink-100, $col-pink-200, $col-pink-900);
+  @include table-00($col-pink-100, $col-pink-200, $col-pink-900);
 }
