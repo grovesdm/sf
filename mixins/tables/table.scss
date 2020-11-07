@@ -1,0 +1,8 @@
+@use "../../vars" as *;
+@use "_index" as *;
+
+.table-00 {
+  //@extend %table;
+  @include table($col-pink-100, $col-pink-200, $col-pink-900);
+}
+
