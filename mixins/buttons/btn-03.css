@@ -1,0 +1,288 @@
+.btn--primary, .btn--secondary, .btn--success, .btn--warning, .btn--alert {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 1em;
+  position: relative;
+  text-decoration: none;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 1em;
+  position: relative;
+  text-decoration: none;
+}
+
+.btn--primary {
+  background-color: #000000;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 1em;
+  position: relative;
+  text-decoration: none;
+}
+
+.btn--primary:active {
+  transform: translate(0, 1px);
+  box-shadow: 0 0 3px 0 #000000;
+}
+
+.btn--primary:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.btn--secondary {
+  background-color: #2D3748;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 1em;
+  position: relative;
+  text-decoration: none;
+}
+
+.btn--secondary:active {
+  transform: translate(0, 1px);
+  box-shadow: 0 0 3px 0 #2D3748;
+}
+
+.btn--secondary:hover {
+  background-color: rgba(45, 55, 72, 0.9);
+}
+
+.btn--success {
+  background-color: #48BB78;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 1em;
+  position: relative;
+  text-decoration: none;
+}
+
+.btn--success:active {
+  transform: translate(0, 1px);
+  box-shadow: 0 0 3px 0 #48BB78;
+}
+
+.btn--success:hover {
+  background-color: rgba(72, 187, 120, 0.9);
+}
+
+.btn--warning {
+  background-color: #DD6B20;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 1em;
+  position: relative;
+  text-decoration: none;
+}
+
+.btn--warning:active {
+  transform: translate(0, 1px);
+  box-shadow: 0 0 3px 0 #DD6B20;
+}
+
+.btn--warning:hover {
+  background-color: rgba(221, 107, 32, 0.9);
+}
+
+.btn--alert {
+  background-color: #C53030;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 1em;
+  position: relative;
+  text-decoration: none;
+}
+
+.btn--alert:active {
+  transform: translate(0, 1px);
+  box-shadow: 0 0 3px 0 #C53030;
+}
+
+.btn--alert:hover {
+  background-color: rgba(197, 48, 48, 0.9);
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 1em;
+  position: relative;
+  text-decoration: none;
+}
+
+.btn--primary {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #f5f5f5;
+  border: 2px solid #000000;
+  box-shadow: 0 0 1px #000000;
+  transform: translateZ(0px);
+  transition-duration: 0.75s;
+  transition-property: color;
+}
+
+.btn--primary:before {
+  background: #000000 none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: 50% 0 0;
+  transition-duration: 0.5s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  width: 100%;
+  z-index: -1;
+}
+
+.btn--primary:hover:before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.btn--secondary {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: rgba(45, 55, 72, 0.3);
+  color: #f5f5f5;
+  border: 2px solid #2D3748;
+  box-shadow: 0 0 1px #000000;
+  transform: translateZ(0px);
+  transition-duration: 0.75s;
+  transition-property: color;
+}
+
+.btn--secondary:before {
+  background: #2D3748 none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: 50% 0 0;
+  transition-duration: 0.5s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  width: 100%;
+  z-index: -1;
+}
+
+.btn--secondary:hover:before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.btn--success {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: rgba(72, 187, 120, 0.3);
+  color: #f5f5f5;
+  border: 2px solid #48BB78;
+  box-shadow: 0 0 1px #000000;
+  transform: translateZ(0px);
+  transition-duration: 0.75s;
+  transition-property: color;
+}
+
+.btn--success:before {
+  background: #48BB78 none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: 50% 0 0;
+  transition-duration: 0.5s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  width: 100%;
+  z-index: -1;
+}
+
+.btn--success:hover:before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.btn--warning {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: rgba(221, 107, 32, 0.3);
+  color: #f5f5f5;
+  border: 2px solid #DD6B20;
+  box-shadow: 0 0 1px #000000;
+  transform: translateZ(0px);
+  transition-duration: 0.75s;
+  transition-property: color;
+}
+
+.btn--warning:before {
+  background: #DD6B20 none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: 50% 0 0;
+  transition-duration: 0.5s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  width: 100%;
+  z-index: -1;
+}
+
+.btn--warning:hover:before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.btn--alert {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: rgba(197, 48, 48, 0.3);
+  color: #f5f5f5;
+  border: 2px solid #C53030;
+  box-shadow: 0 0 1px #000000;
+  transform: translateZ(0px);
+  transition-duration: 0.75s;
+  transition-property: color;
+}
+
+.btn--alert:before {
+  background: #C53030 none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: 50% 0 0;
+  transition-duration: 0.5s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  width: 100%;
+  z-index: -1;
+}
+
+.btn--alert:hover:before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}

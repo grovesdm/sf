@@ -1,26 +1,8 @@
 @use "../../vars" as *;
-@use "btn" as *;
+@use "_index" as *;
 
-@mixin btn-04(
-  $bg: $col-black,
-  $fg: $col-white,
-  $bg-page: $col-white
-) {
-
-  @extend %btn;
-  background-color: $bg;
-  color: $fg;
-  &:active {
-
-  }
-
-  &:hover {
-    box-shadow: 0 0 0 2px $bg-page, 0 0 0 4px $bg;
-  }
-}
-
-.btn-04 {
-  @include btn-04;
+.btn {
+  @include btn;
 
   &--primary {
     @include btn-04($col-black, $col-white);

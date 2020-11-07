@@ -1,0 +1,17 @@
+@use "../../vars" as *;
+@use "btn" as *;
+
+@mixin btn-00(
+  $bg: $col-black,
+  $fg: $col-white
+) {
+
+  background-color: $bg;
+  color: $fg;
+
+  &:active { }
+
+  &:hover {
+  }
+}
+

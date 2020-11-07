@@ -1,3 +1,11 @@
+.btn--primary, .btn--secondary, .btn--success, .btn--warning, .btn--alert {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 1em;
+  position: relative;
+  text-decoration: none;
+}
+
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -114,9 +122,17 @@
   color: #f5f5f5;
 }
 
+.btn--primary:hover {
+  box-shadow: 0 0 0 2px #f5f5f5, 0 0 0 4px #000000;
+}
+
 .btn--secondary {
   background-color: #2D3748;
   color: #f5f5f5;
+}
+
+.btn--secondary:hover {
+  box-shadow: 0 0 0 2px #f5f5f5, 0 0 0 4px #2D3748;
 }
 
 .btn--success {
@@ -124,12 +140,24 @@
   color: #f5f5f5;
 }
 
+.btn--success:hover {
+  box-shadow: 0 0 0 2px #f5f5f5, 0 0 0 4px #48BB78;
+}
+
 .btn--warning {
   background-color: #DD6B20;
   color: #f5f5f5;
 }
 
+.btn--warning:hover {
+  box-shadow: 0 0 0 2px #f5f5f5, 0 0 0 4px #DD6B20;
+}
+
 .btn--alert {
   background-color: #C53030;
   color: #f5f5f5;
+}
+
+.btn--alert:hover {
+  box-shadow: 0 0 0 2px #f5f5f5, 0 0 0 4px #C53030;
 }

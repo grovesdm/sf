@@ -1,30 +1,26 @@
 @use "../../vars" as *;
-@use "btn" as *;
+@use "_index" as *;
 
-@mixin btn-06(
-  $bg: $col-blue-700,
-  $fg: $col-white,
-  $bs--inner: $fg,
-  $bs--outer: $bg
-) {
+.btn {
+  @include btn;
 
-  //@extend %btn;
-  background-color: $bg;
-  color: $fg;
-  border-radius: 3px;
-
-  &:active {
-    background-color: $bg;
-    color: $fg;
+  &--primary {
+    @include btn-06($col-black, $col-white);
   }
 
-  &:hover {
-    background-color: $bg;
-    //color: $fg;
+  &--secondary {
+    @include btn-06($col-gray-800, $col-white);
+  }
 
-    box-shadow: 2px 2px 0px $bs--inner, 4px 4px 0px $bs--outer;
-    top: -4px;
-    left: -4px;
+  &--success {
+    @include btn-06($col-success, $col-white);
+  }
 
+  &--warning {
+    @include btn-06($col-warning, $col-white);
+  }
+
+  &--alert {
+    @include btn-06($col-alert, $col-white);
   }
 }

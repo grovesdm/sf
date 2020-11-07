@@ -1,3 +1,11 @@
+.btn--primary, .btn--secondary, .btn--success, .btn--warning, .btn--alert {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 1em;
+  position: relative;
+  text-decoration: none;
+}
+
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -112,24 +120,74 @@
 .btn--primary {
   background-color: #000000;
   color: #f5f5f5;
+  border-radius: 3px;
+}
+
+.btn--primary:active {
+  background-color: #000000;
+  color: #f5f5f5;
+}
+
+.btn--primary:hover {
+  box-shadow: 0 0 0 1px #000000;
 }
 
 .btn--secondary {
   background-color: #2D3748;
   color: #f5f5f5;
+  border-radius: 3px;
+}
+
+.btn--secondary:active {
+  background-color: #2D3748;
+  color: #f5f5f5;
+}
+
+.btn--secondary:hover {
+  box-shadow: 0 0 0 1px #2D3748;
 }
 
 .btn--success {
   background-color: #48BB78;
   color: #f5f5f5;
+  border-radius: 3px;
+}
+
+.btn--success:active {
+  background-color: #48BB78;
+  color: #f5f5f5;
+}
+
+.btn--success:hover {
+  box-shadow: 0 0 0 1px #48BB78;
 }
 
 .btn--warning {
   background-color: #DD6B20;
   color: #f5f5f5;
+  border-radius: 3px;
+}
+
+.btn--warning:active {
+  background-color: #DD6B20;
+  color: #f5f5f5;
+}
+
+.btn--warning:hover {
+  box-shadow: 0 0 0 1px #DD6B20;
 }
 
 .btn--alert {
   background-color: #C53030;
   color: #f5f5f5;
+  border-radius: 3px;
+}
+
+.btn--alert:active {
+  background-color: #C53030;
+  color: #f5f5f5;
+}
+
+.btn--alert:hover {
+  box-shadow: 0 0 0 1px #C53030;
 }

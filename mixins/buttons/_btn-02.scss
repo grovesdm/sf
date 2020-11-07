@@ -1,0 +1,50 @@
+@use "../../vars" as *;
+@use "btn" as *;
+
+@mixin btn-02(
+  $bg: $col-gray-800,
+  $fg: $col-white
+) {
+  //EXTEND THE BASE BUTTON
+  @extend %btn;
+  background-color: $bg;
+  color: $fg;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 5px 0 0 darken($bg, 10);
+
+  &:active {
+    transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
+  }
+
+  &:hover {
+    background-color: transparentize($bg, 0.10);
+  }
+}
+
+//
+//.btn-02 {
+//  @include btn-02;
+//
+//  &--primary {
+//    @include btn-02($col-blue-700, $col-white);
+//  }
+//
+//  &--secondary {
+//    @include btn-02($col-gray-600, $col-white);
+//  }
+//
+//  &--success {
+//    @include btn-02($col-success, $col-white);
+//  }
+//
+//  &--warning {
+//    @include btn-02($col-warning, $col-white);
+//  }
+//
+//  &--alert {
+//    @include btn-02($col-alert, $col-white);
+//  }
+//}
+//

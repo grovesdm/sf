@@ -36,3 +36,28 @@
 @forward 'mixins';
 
 @forward 'placeholders';
+
+//
+//.btn-00 {
+//  @include btn-00;
+//
+//  &--primary {
+//    @include btn-00($col-black, $col-white);
+//  }
+//
+//  &--secondary {
+//    @include btn-00($col-gray-800, $col-white);
+//  }
+//
+//  &--success {
+//    @include btn-00($col-success, $col-white);
+//  }
+//
+//  &--warning {
+//    @include btn-00($col-warning, $col-white);
+//  }
+//
+//  &--alert {
+//    @include btn-00($col-alert, $col-white);
+//  }
+//}
