@@ -1,7 +1,7 @@
 @use "../../vars" as *;
 @use "_index" as *;
 
-.btn {
+.btn-06 {
   @include btn;
 
   &--primary {
@@ -24,3 +24,4 @@
     @include btn-06($col-alert, $col-white);
   }
 }
+
