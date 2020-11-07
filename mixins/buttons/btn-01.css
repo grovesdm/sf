@@ -101,7 +101,7 @@
   background-color: rgba(197, 48, 48, 0.9);
 }
 
-.btn {
+.btn-01 {
   cursor: pointer;
   display: inline-block;
   padding: 0.5em 1em;
@@ -109,7 +109,7 @@
   text-decoration: none;
 }
 
-.btn--primary {
+.btn-01--primary {
   background-color: #000000;
   color: #f5f5f5;
   cursor: pointer;
@@ -119,16 +119,16 @@
   text-decoration: none;
 }
 
-.btn--primary:active {
+.btn-01--primary:active {
   transform: translate(0, 1px);
   box-shadow: 0 0 3px 0 #000000;
 }
 
-.btn--primary:hover {
+.btn-01--primary:hover {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-.btn--secondary {
+.btn-01--secondary {
   background-color: #2D3748;
   color: #f5f5f5;
   cursor: pointer;
@@ -138,16 +138,16 @@
   text-decoration: none;
 }
 
-.btn--secondary:active {
+.btn-01--secondary:active {
   transform: translate(0, 1px);
   box-shadow: 0 0 3px 0 #2D3748;
 }
 
-.btn--secondary:hover {
+.btn-01--secondary:hover {
   background-color: rgba(45, 55, 72, 0.9);
 }
 
-.btn--success {
+.btn-01--success {
   background-color: #48BB78;
   color: #f5f5f5;
   cursor: pointer;
@@ -157,16 +157,16 @@
   text-decoration: none;
 }
 
-.btn--success:active {
+.btn-01--success:active {
   transform: translate(0, 1px);
   box-shadow: 0 0 3px 0 #48BB78;
 }
 
-.btn--success:hover {
+.btn-01--success:hover {
   background-color: rgba(72, 187, 120, 0.9);
 }
 
-.btn--warning {
+.btn-01--warning {
   background-color: #DD6B20;
   color: #f5f5f5;
   cursor: pointer;
@@ -176,16 +176,16 @@
   text-decoration: none;
 }
 
-.btn--warning:active {
+.btn-01--warning:active {
   transform: translate(0, 1px);
   box-shadow: 0 0 3px 0 #DD6B20;
 }
 
-.btn--warning:hover {
+.btn-01--warning:hover {
   background-color: rgba(221, 107, 32, 0.9);
 }
 
-.btn--alert {
+.btn-01--alert {
   background-color: #C53030;
   color: #f5f5f5;
   cursor: pointer;
@@ -195,11 +195,11 @@
   text-decoration: none;
 }
 
-.btn--alert:active {
+.btn-01--alert:active {
   transform: translate(0, 1px);
   box-shadow: 0 0 3px 0 #C53030;
 }
 
-.btn--alert:hover {
+.btn-01--alert:hover {
   background-color: rgba(197, 48, 48, 0.9);
 }

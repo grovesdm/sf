@@ -101,7 +101,7 @@
   background-color: rgba(197, 48, 48, 0.9);
 }
 
-.btn {
+.btn-00 {
   cursor: pointer;
   display: inline-block;
   padding: 0.5em 1em;
@@ -109,27 +109,27 @@
   text-decoration: none;
 }
 
-.btn--primary {
+.btn-00--primary {
   background-color: #000000;
   color: #f5f5f5;
 }
 
-.btn--secondary {
+.btn-00--secondary {
   background-color: #2D3748;
   color: #f5f5f5;
 }
 
-.btn--success {
+.btn-00--success {
   background-color: #48BB78;
   color: #f5f5f5;
 }
 
-.btn--warning {
+.btn-00--warning {
   background-color: #DD6B20;
   color: #f5f5f5;
 }
 
-.btn--alert {
+.btn-00--alert {
   background-color: #C53030;
   color: #f5f5f5;
 }

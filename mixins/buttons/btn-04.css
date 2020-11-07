@@ -1,4 +1,4 @@
-.btn--primary, .btn--secondary, .btn--success, .btn--warning, .btn--alert {
+.btn-05--primary, .btn-05--secondary, .btn-05--success, .btn-05--warning, .btn-05--alert {
   cursor: pointer;
   display: inline-block;
   padding: 0.5em 1em;
@@ -109,7 +109,7 @@
   background-color: rgba(197, 48, 48, 0.9);
 }
 
-.btn {
+.btn-05 {
   cursor: pointer;
   display: inline-block;
   padding: 0.5em 1em;
@@ -117,47 +117,47 @@
   text-decoration: none;
 }
 
-.btn--primary {
+.btn-05--primary {
   background-color: #000000;
   color: #f5f5f5;
 }
 
-.btn--primary:hover {
+.btn-05--primary:hover {
   box-shadow: 0 0 0 2px #f5f5f5, 0 0 0 4px #000000;
 }
 
-.btn--secondary {
+.btn-05--secondary {
   background-color: #2D3748;
   color: #f5f5f5;
 }
 
-.btn--secondary:hover {
+.btn-05--secondary:hover {
   box-shadow: 0 0 0 2px #f5f5f5, 0 0 0 4px #2D3748;
 }
 
-.btn--success {
+.btn-05--success {
   background-color: #48BB78;
   color: #f5f5f5;
 }
 
-.btn--success:hover {
+.btn-05--success:hover {
   box-shadow: 0 0 0 2px #f5f5f5, 0 0 0 4px #48BB78;
 }
 
-.btn--warning {
+.btn-05--warning {
   background-color: #DD6B20;
   color: #f5f5f5;
 }
 
-.btn--warning:hover {
+.btn-05--warning:hover {
   box-shadow: 0 0 0 2px #f5f5f5, 0 0 0 4px #DD6B20;
 }
 
-.btn--alert {
+.btn-05--alert {
   background-color: #C53030;
   color: #f5f5f5;
 }
 
-.btn--alert:hover {
+.btn-05--alert:hover {
   box-shadow: 0 0 0 2px #f5f5f5, 0 0 0 4px #C53030;
 }
