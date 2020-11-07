@@ -1,0 +1,32 @@
+.table-00 {
+  width: 100%;
+  border-collapse: collapse;
+  /* provide some minimal visual accomodation for IE8 and below */
+  /*  Define the background color for all the ODD background rows  */
+  /*  Define the background color for all the EVEN background rows  */
+}
+
+.table-00 td {
+  padding: 7px;
+  border: #702459 1px solid;
+}
+
+.table-00 tr {
+  background: #FFF5F7;
+}
+
+.table-00 tr:nth-child(odd) {
+  background: #FFF5F7;
+}
+
+.table-00 tr:nth-child(odd):hover {
+  background-color: rgba(255, 245, 247, 0.8);
+}
+
+.table-00 tr:nth-child(even) {
+  background: #FED7E2;
+}
+
+.table-00 tr:nth-child(even):hover {
+  background-color: rgba(254, 215, 226, 0.8);
+}
