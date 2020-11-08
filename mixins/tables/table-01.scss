@@ -1,0 +1,60 @@
+@use "../../vars" as *;
+@use "_index" as *;
+
+.table-01 {
+  font-size: 90%;
+
+  @include table-01(
+    // CONFIG ///////////////
+    /////////////////////////
+          $column-width-fixed: false, //<-- SETS COLUMNS TO ALL EQUAL WIDTH
+          $table-width: 1014px, // SET TABLE WIDTH
+          $table-padding: 0.25em 0.5em, // PADDING FOR TEXT INSIDE TABLE CELLS
+          $table-stripes: even, // odd || even || null
+            //$table-stack-breakpoint
+            //$show-header-for-stacked
+
+            /////////////////////////
+            // COLOURS //////////////
+            /////////////////////////
+          $table-background: transparent,
+          $table-color: $col-black,
+          $th-background: $col-orange-100,
+          $th-color: $col-black,
+          $table-row-hover: true, // true || false TABLE MOUSE HOVER EFFECT
+          $table-row-striped-background: $col-orange-100,
+          $th-row-hover: lighten($col-orange-100, 1%),
+            /////////////////////////
+            // BORDERS //////////////
+            /////////////////////////
+
+            //$thead-border-columns: 1px solid #ddd,
+          $thead-border-row: 1px solid #DDDDDD, //<-- null || css border
+            //$table-border-columns: 1px solid #ddd, //<-- null || css border
+          $table-border-rows: 1px solid #DDDDDD, //<-- null || css border
+    //  $table-border-radius: 10px, //
+
+  );
+
+  td:nth-child(1) {
+    //width: 32.5%;
+    white-space: nowrap;
+  }
+
+  //th {
+  //  border-bottom: 1px solid red;
+  //}
+
+  //  @media (max-width: 767px) {
+  ////OPTION TO STACK
+  //    .table {
+  //      //width: 100%;
+  //    }
+  //
+  //    table, th, tr, td {
+  //      display: block;
+  //
+  //    }
+  //  }
+
+}

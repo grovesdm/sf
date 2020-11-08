@@ -25,42 +25,41 @@
   }
 }
 
-@mixin table-01(
-  $table-background: #F6F6F6,
-  $table-color: $col-black,
-    //$table-row-hover
-
-
-  $table-border: null,
-  $table-has-border: true,
-  $table-border-radius: null,
-  $table-border-columns: false,
-  $table-border-rows: false,
-  $table-border-style: solid,
-
-  $th-background: $col-gray-700,
-  $th-color: $col-black,
-  //$table-head-row-hover
-
-  $th-border: $th-background 1px solid,
-  $th-border-style: $table-border-style,
-  $table-width: 100%,
-  $table-is-fixed: true, //<-- SETS COLUMNS TO ALL EQUAL WIDTH
-
-  $table-padding: 0.25em 0.5em,
-
-
-    $table-row-stripe-hover: true,
-    $table-is-striped: true, // Turn on and off stripes
-    $table-striped-background: $col-pink-300,
-    $table-stripe: even, // ODD | EVEN
-
-
-  //$table-foot-background
-  //$table-foot-row-hover
-  //$table-foot-color
+@mixin table-01(/////////////////////////
+  // CONFIG ///////////////
+  /////////////////////////
+  $column-width-fixed: false, //<-- SETS COLUMNS TO ALL EQUAL WIDTH
+  $table-width: 100%, // SET TABLE WIDTH
+  $table-padding: 0.25em 0.5em, // PADDING FOR TEXT INSIDE TABLE CELLS
+  $table-stripes: even, // odd || even || null
   //$table-stack-breakpoint
   //$show-header-for-stacked
+
+/////////////////////////
+// COLOURS //////////////
+/////////////////////////
+  $table-background: #F6F6F6,
+  $table-color: $col-black,
+
+  $th-background: #EAEAEA,
+  $th-color: $col-black,
+
+  $table-row-hover: true, // true || false TABLE MOUSE HOVER EFFECT
+  $table-row-striped-background: $th-background,
+  $th-row-hover: lighten($th-background, 1%),
+
+/////////////////////////
+// BORDERS //////////////
+/////////////////////////
+//  $table-border: null,
+  //$table-has-border: true,
+  $table-border-radius: null,
+  $table-border-columns: null,
+  $table-border-rows: null,
+
+
+  $thead-border-columns: null,
+  $thead-border-row: null, //<-- null || css border
 
 ) {
   //////////////////////////////////////////////////
@@ -68,20 +67,23 @@
   //////////////////////////////////////////////////
   padding: 2em 0;
   //  //SET WIDTH AND HEIGHT OF CONTAINER TO ENABLE SCROLL
-    overflow: auto; //<-- ENABLE SCROLL
-    //width: 100%;
+  overflow: auto; //<-- ENABLE SCROLL
+  width: 100%;
   //  //height: 200px;
 
   table {
+    min-width: 100%;
     width: $table-width;
+    border-collapse: separate; //<-- NEEDS TO BE SEPARATE FOR BORDER RADIUS & BORDER SIZING
+    border-spacing: 0; //<-- SECRET SAUCE
 
-    @if ($table-is-fixed) {
+    @if ($column-width-fixed) {
       table-layout: fixed;
     }
 
     p {
       //////////////////////////////////////////////////
-      // RESET PADDINGS INSIDE TABLE ///////////////////
+      // RESET PADDING INSIDE TABLE ///////////////////
       //////////////////////////////////////////////////
       padding: 0;
       margin: 0;
@@ -91,8 +93,6 @@
       //////////////////////////////////////////////////
       // IF BORDER RADIUS TRUE /////////////////////////
       //////////////////////////////////////////////////
-      border-collapse: separate; //<-- NEEDS TO BE SEPERATE FOR BORDER RADIUS
-      border-spacing: 0; //<-- SECRET SAUCE
       tr {
         &:first-child {
           th:first-child {
@@ -114,8 +114,6 @@
           }
         }
       }
-    } @else {
-      border-collapse: collapse;
     }
 
     //////////////////////////////////////////////////
@@ -154,7 +152,7 @@
 
     tfoot { }
 
-    @if $table-is-striped {
+    @if $table-stripes == even {
       //////////////////////////////////////////////////
       // ADD STRIPES TO TABLE //////////////////////////
       //////////////////////////////////////////////////
@@ -162,7 +160,7 @@
         /*  Define the background color for all the ODD background rows  */
         background: $table-background;
 
-        @if $table-row-stripe-hover {
+        @if $table-row-hover {
 
           &:hover {
             background-color: lighten($table-background, 1%);
@@ -173,74 +171,66 @@
 
       tr:nth-child(even) {
         /*  Define the background color for all the EVEN background rows  */
-        background: $table-striped-background;
+        background: $table-row-striped-background;
 
-        @if $table-row-stripe-hover {
+        @if $table-row-hover {
           &:hover {
-            background-color: lighten($table-striped-background, 1%);
+            background-color: lighten($table-row-striped-background, 1%);
           }
+        }
+      }
+
+    }
+
+    //////////////////////////////////////////////////
+    // BORDERS ///////////////////////////////////////
+    //////////////////////////////////////////////////
+
+    @if $thead-border-row {
+
+      th {
+        border-top: $thead-border-row;
+        border-bottom: $thead-border-row;
+
+      }
+    }
+
+    @if $thead-border-columns {
+
+      th {
+        //border-bottom: $table-border-columns;
+        border-right: $thead-border-columns;
+
+        &:first-child {
+          border-left: $thead-border-columns;
+        }
+      }
+
+    }
+
+    @if $table-border-columns {
+
+      td {
+        //border-bottom: $table-border-columns;
+        border-right: $table-border-columns;
+
+        &:first-child {
+          border-left: $table-border-columns;
         }
       }
 
     }
 
     @if $table-border-rows {
-      //////////////////////////////////////////////////
-      // BORDERS ///////////////////////////////////////
-      //////////////////////////////////////////////////
-      th {
-        @if $table-border-columns {
-          border-bottom: $table-border;
-          border-right: $table-border;
-          //border-top: $table-border;
-          &:first-child {
-            border-left: $table-border;
-          }
-
-        } @else {
-
-          border: $table-border;
-          border-style: $table-border-style;
-
-        }
-      }
-
-      tr {
-
-      }
-
       td {
-        //////////////////////////////
-        // TABLE DATA ////////////////
-        //////////////////////////////
-        @if $table-border-columns {
-          border-bottom: $table-border;
-          border-right: $table-border;
-          &:first-child {
-            border-left: $table-border;
-          }
-
-        } @else {
-
-          border: $table-border;
-          border-style: $table-border-style;
-
-        }
+        //border-top: $table-border-rows;
+        border-bottom: $table-border-rows;
 
       }
+      th {
+        border-bottom: $table-border-rows;
+      }
+
     }
-
   }
-
 }
-
-//.table-01 {
-//  @include table-01(
-//          $th-background: #362F4B, // 1
-//          $th-color: #CAC5D5, // 2
-//          $table-padding: 0.5em 2em, // 3
-//          $table-border-radius: 10px
-//  );
-//}
-
-
