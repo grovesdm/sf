@@ -1,3 +1,93 @@
+.table-01 {
+  font-size: 90%;
+  padding: 2em 0;
+  overflow: auto;
+}
+
+.table-01 table {
+  width: 1104px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-01 table p {
+  padding: 0;
+  margin: 0;
+}
+
+.table-01 table tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.table-01 table tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.table-01 table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.table-01 table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.table-01 table th {
+  background-color: #FFFFFF;
+  color: #000000;
+  padding: 0.25em 1em;
+  text-align: left;
+}
+
+.table-01 table tr {
+  background: #fff;
+  padding: 0.25em 1em;
+}
+
+.table-01 table td {
+  padding: 0.25em 1em;
+  text-align: left;
+}
+
+.table-01 table tr:nth-child(odd) {
+  /*  Define the background color for all the ODD background rows  */
+  background: #fff;
+}
+
+.table-01 table tr:nth-child(odd):hover {
+  background-color: white;
+}
+
+.table-01 table tr:nth-child(even) {
+  /*  Define the background color for all the EVEN background rows  */
+  background: rgba(255, 144, 0, 0.1);
+}
+
+.table-01 table tr:nth-child(even):hover {
+  background-color: rgba(255, 146, 5, 0.1);
+}
+
+.table-01 table th {
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.table-01 table th:first-child {
+  border-left: 1px solid #ddd;
+}
+
+.table-01 table td {
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.table-01 table td:first-child {
+  border-left: 1px solid #ddd;
+}
+
+.table-01 td:nth-child(1) {
+  white-space: nowrap;
+}
+
 .table-00 {
   width: 100%;
   border-collapse: collapse;
