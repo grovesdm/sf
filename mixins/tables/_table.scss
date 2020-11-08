@@ -27,31 +27,38 @@
 
 @mixin table-01(
   $table-background: #F6F6F6,
-  $table-color-scale: 1%,
+  $table-color: $col-black,
+    //$table-row-hover
+
+
+  $table-border: null,
   $table-has-border: true,
-  $table-border: #BBBBBB,
   $table-border-radius: null,
-  $table-border-style: hidden hidden solid,
-  $table-padding: 0.25em 0.5em,
+  $table-border-columns: false,
+  $table-border-rows: false,
+  $table-border-style: solid,
+
   $th-background: $col-gray-700,
+  $th-color: $col-black,
+  //$table-head-row-hover
+
   $th-border: $th-background 1px solid,
   $th-border-style: $table-border-style,
-  $th-color: $col-white,
   $table-width: 100%,
   $table-is-fixed: true, //<-- SETS COLUMNS TO ALL EQUAL WIDTH
-  //$table-head-background
-  //$table-head-row-hover
-  //$table-head-font-color
-  //$table-color-scale
-  //$table-hover-scale
-  //$table-row-hover
-  $table-row-stripe-hover: true,
-  $table-is-striped: true, // Turn on and off stripes
-  $table-striped-background: smart-scale($table-background, $table-color-scale),
-  //$table-stripe
+
+  $table-padding: 0.25em 0.5em,
+
+
+    $table-row-stripe-hover: true,
+    $table-is-striped: true, // Turn on and off stripes
+    $table-striped-background: $col-pink-300,
+    $table-stripe: even, // ODD | EVEN
+
+
   //$table-foot-background
   //$table-foot-row-hover
-  //$table-foot-font-color
+  //$table-foot-color
   //$table-stack-breakpoint
   //$show-header-for-stacked
 
@@ -61,17 +68,16 @@
   //////////////////////////////////////////////////
   padding: 2em 0;
   //  //SET WIDTH AND HEIGHT OF CONTAINER TO ENABLE SCROLL
-  //  overflow: auto; //<-- ENABLE SCROLL
-  //  //width: 50%;
+    overflow: auto; //<-- ENABLE SCROLL
+    //width: 100%;
   //  //height: 200px;
 
   table {
     width: $table-width;
 
-    @if($table-is-fixed) {
+    @if ($table-is-fixed) {
       table-layout: fixed;
     }
-
 
     p {
       //////////////////////////////////////////////////
@@ -112,19 +118,16 @@
       border-collapse: collapse;
     }
 
-
     //////////////////////////////////////////////////
     // GENERAL STYLES ////////////////////////////////
     //////////////////////////////////////////////////
 
-    thead {
-
-    }
+    thead { }
 
     th {
-      //////////////////////////////////////////////////
-      // TABLE HEADER //////////////////////////////////
-      //////////////////////////////////////////////////
+      /////////////////////////
+      // TABLE HEADER /////////
+      /////////////////////////
       background-color: $th-background;
       color: $th-color;
       padding: $table-padding;
@@ -133,23 +136,23 @@
     }
 
     tr {
-      //////////////////////////////////////////////////
-      // TABLE ROWS ////////////////////////////////////
-      //////////////////////////////////////////////////
+      /////////////////////////
+      // TABLE ROWS ///////////
+      /////////////////////////
       background: $table-background;
       padding: $table-padding;
     }
 
     td {
-      //////////////////////////////////////////////////
-      // TABLE DATA ////////////////////////////////////
-      //////////////////////////////////////////////////
+      /////////////////////////
+      // TABLE DATA ///////////
+      /////////////////////////
       padding: $table-padding;
       text-align: left;
 
-
-
     }
+
+    tfoot { }
 
     @if $table-is-striped {
       //////////////////////////////////////////////////
@@ -174,46 +177,62 @@
 
         @if $table-row-stripe-hover {
           &:hover {
-            background-color: lighten(darken($table-background, $table-color-scale), 1%);
+            background-color: lighten($table-striped-background, 1%);
           }
         }
       }
 
     }
 
-    //////////////////////////////////////////////////
-    // BORDERS ///////////////////////////////////////
-    //////////////////////////////////////////////////
-    th {
-      border: $th-border;
-      border-style: $th-border-style;
-      //border-bottom: $th-border;
-      //border-left: $th-border;
-    }
+    @if $table-border-rows {
+      //////////////////////////////////////////////////
+      // BORDERS ///////////////////////////////////////
+      //////////////////////////////////////////////////
+      th {
+        @if $table-border-columns {
+          border-bottom: $table-border;
+          border-right: $table-border;
+          //border-top: $table-border;
+          &:first-child {
+            border-left: $table-border;
+          }
 
-    tr {
+        } @else {
 
-    }
+          border: $table-border;
+          border-style: $table-border-style;
 
-    td {
-      //////////////////////////////
-      // TABLE DATA ////////////////
-      //////////////////////////////
-      border-bottom: $table-border 1px solid;
-      border-right: $table-border 1px solid;
+        }
+      }
 
+      tr {
 
+      }
 
+      td {
+        //////////////////////////////
+        // TABLE DATA ////////////////
+        //////////////////////////////
+        @if $table-border-columns {
+          border-bottom: $table-border;
+          border-right: $table-border;
+          &:first-child {
+            border-left: $table-border;
+          }
 
-      &:first-child {
-        border-left: $table-border 1px solid;
+        } @else {
+
+          border: $table-border;
+          border-style: $table-border-style;
+
+        }
+
       }
     }
+
   }
 
 }
-
-
 
 //.table-01 {
 //  @include table-01(
@@ -224,56 +243,4 @@
 //  );
 //}
 
-.table-01 {
-  @include table-01(
-          $th-background: #FFFFFF, // 1
-          $th-color: #000000, // 2
-          $table-padding: 0.5em 2em, // 3
-            //$table-border-radius: 10px
-          $table-is-striped: false,
-          $table-background: #FFFFFF,
-          //$table-border: green, //$th-border: #000 1px solid,
-          $th-border: 1px solid #BBBBBB,
-          $table-border-style: hidden hidden solid,
-          $th-border-style: hidden hidden solid,
-  $table-is-fixed: false,
-  );
 
-
-  td:nth-child(1) {
-    width: 35%;
-  }
-
-  th {
-    border-bottom: 1px solid red;
-  }
-
-}
-
-@mixin triangle($size, $color, $direction) {
-  height: 0;
-  width: 0;
-
-  border-color: transparent;
-  border-style: solid;
-  border-width: $size / 2;
-
-  @if $direction == up {
-    border-bottom-color: $color;
-  } @else if $direction == right {
-    border-left-color: $color;
-  } @else if $direction == down {
-    border-top-color: $color;
-  } @else if $direction == left {
-    border-right-color: $color;
-  } @else {
-    @error "Unknown direction #{$direction}.";
-  }
-}
-
-.next {
-  border: 5px;
-  border-color: red;
-  border-style: solid dotted;
-  height: 50px;
-}

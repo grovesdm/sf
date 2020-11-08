@@ -1,0 +1,63 @@
+@use "../../vars" as *;
+@use "_table" as *;
+
+
+
+
+.table-01 {
+  font-size: 90%;
+
+  @include table-01(
+          $th-background: #FFFFFF, // 1
+          $th-color: #000000, // 2
+          $table-padding: 0.25em 1em, // 3
+            $table-border-radius: 10px,
+          $table-is-striped: true,
+          $table-striped-background: transparentize(#ff9000, 0.9),
+          $table-background: #fff,
+          $table-border: 1px solid #ddd, //$th-border: #000 1px solid,
+          $table-border-style: solid hidden,
+          $th-border: 1px solid #ddd,
+          $th-border-style: solid,
+          $table-is-fixed: false, //<-- SET TRUE FOR EQUAL COLUMNS
+  $table-border-rows: true,
+  $table-border-columns: true, //<-- TURN COLUMN BORDERS ON
+          $table-width: 1104px,
+  );
+
+
+  td:nth-child(1) {
+    //width: 32.5%;
+    white-space: nowrap;
+  }
+
+  //th {
+  //  border-bottom: 1px solid red;
+  //}
+
+
+}
+
+
+
+
+@mixin triangle($size, $color, $direction) {
+  height: 0;
+  width: 0;
+
+  border-color: transparent;
+  border-style: solid;
+  border-width: $size / 2;
+
+  @if $direction == up {
+    border-bottom-color: $color;
+  } @else if $direction == right {
+    border-left-color: $color;
+  } @else if $direction == down {
+    border-top-color: $color;
+  } @else if $direction == left {
+    border-right-color: $color;
+  } @else {
+    @error "Unknown direction #{$direction}.";
+  }
+}
