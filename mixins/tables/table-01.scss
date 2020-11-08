@@ -4,7 +4,7 @@
 .table-01 {
   font-size: 90%;
 
-  @include table-01(
+  @include table(
     // CONFIG ///////////////
     /////////////////////////
           $column-width-fixed: false, //<-- SETS COLUMNS TO ALL EQUAL WIDTH
