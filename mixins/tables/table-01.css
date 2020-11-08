@@ -1,0 +1,70 @@
+.table-01 {
+  font-size: 90%;
+  padding: 2em 0;
+  overflow: auto;
+  width: 100%;
+}
+
+.table-01 table {
+  min-width: 100%;
+  width: 1014px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-01 table p {
+  padding: 0;
+  margin: 0;
+}
+
+.table-01 table th {
+  background-color: #FFFAF0;
+  color: #000000;
+  padding: 0.25em 0.5em;
+  text-align: left;
+}
+
+.table-01 table tr {
+  background: transparent;
+  padding: 0.25em 0.5em;
+}
+
+.table-01 table td {
+  padding: 0.25em 0.5em;
+  text-align: left;
+}
+
+.table-01 table tr:nth-child(odd) {
+  /*  Define the background color for all the ODD background rows  */
+  background: transparent;
+}
+
+.table-01 table tr:nth-child(odd):hover {
+  background-color: rgba(3, 3, 3, 0);
+}
+
+.table-01 table tr:nth-child(even) {
+  /*  Define the background color for all the EVEN background rows  */
+  background: #FFFAF0;
+}
+
+.table-01 table tr:nth-child(even):hover {
+  background-color: #fffcf5;
+}
+
+.table-01 table th {
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.table-01 table td {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.table-01 table th {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.table-01 td:nth-child(1) {
+  white-space: nowrap;
+}
