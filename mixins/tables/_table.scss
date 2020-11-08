@@ -1,57 +1,279 @@
 @use "../../vars" as *;
+
 %table {
-  width:100%;
-  border-collapse:collapse;
+  width: 100%;
+  border-collapse: collapse;
 
-
-  td{
-    padding:1em;
+  td {
+    padding: 1em;
 
   }
+
   /* provide some minimal visual accomodation for IE8 and below */
-  tr{
-    background: #b8d1f3;
+  tr {
+    background: #B8D1F3;
   }
+
   // Define the background color for all the ODD background rows
-  tr:nth-child(odd){
-    background: #b8d1f3;
+  tr:nth-child(odd) {
+    background: #B8D1F3;
   }
+
   /*  Define the background color for all the EVEN background rows  */
-  tr:nth-child(even){
-    background: #dae5f4;
+  tr:nth-child(even) {
+    background: #DAE5F4;
   }
 }
 
+@mixin table-01(
+  $table-background: #F6F6F6,
+  $table-color-scale: 1%,
+  $table-has-border: true,
+  $table-border: #BBBBBB,
+  $table-border-radius: null,
+  $table-border-style: hidden hidden solid,
+  $table-padding: 0.25em 0.5em,
+  $th-background: $col-gray-700,
+  $th-border: $th-background 1px solid,
+  $th-border-style: $table-border-style,
+  $th-color: $col-white,
+  $table-width: 100%,
+  $table-is-fixed: true, //<-- SETS COLUMNS TO ALL EQUAL WIDTH
+  //$table-head-background
+  //$table-head-row-hover
+  //$table-head-font-color
+  //$table-color-scale
+  //$table-hover-scale
+  //$table-row-hover
+  $table-row-stripe-hover: true,
+  $table-is-striped: true, // Turn on and off stripes
+  $table-striped-background: smart-scale($table-background, $table-color-scale),
+  //$table-stripe
+  //$table-foot-background
+  //$table-foot-row-hover
+  //$table-foot-font-color
+  //$table-stack-breakpoint
+  //$show-header-for-stacked
 
-@mixin table(
-  $background--odd: $col-gray-100,
-  $background--even: $col-gray-300,
-  $border: $col-black
-)
-{
-  width:100%;
-  border-collapse:collapse;
+) {
+  //////////////////////////////////////////////////
+  // TABLE CONTAINER STYLING ///////////////////////
+  //////////////////////////////////////////////////
+  padding: 2em 0;
+  //  //SET WIDTH AND HEIGHT OF CONTAINER TO ENABLE SCROLL
+  //  overflow: auto; //<-- ENABLE SCROLL
+  //  //width: 50%;
+  //  //height: 200px;
+
+  table {
+    width: $table-width;
+
+    @if($table-is-fixed) {
+      table-layout: fixed;
+    }
 
 
-  td{
-    padding:7px; border: $border 1px solid;
-  }
-  /* provide some minimal visual accomodation for IE8 and below */
-  tr{
-    background: $background--odd;
-  }
-  /*  Define the background color for all the ODD background rows  */
-  tr:nth-child(odd){
-    background: $background--odd;
-    &:hover {
-      background-color: transparentize($background--odd, 0.2);
+    p {
+      //////////////////////////////////////////////////
+      // RESET PADDINGS INSIDE TABLE ///////////////////
+      //////////////////////////////////////////////////
+      padding: 0;
+      margin: 0;
+    }
+
+    @if $table-border-radius {
+      //////////////////////////////////////////////////
+      // IF BORDER RADIUS TRUE /////////////////////////
+      //////////////////////////////////////////////////
+      border-collapse: separate; //<-- NEEDS TO BE SEPERATE FOR BORDER RADIUS
+      border-spacing: 0; //<-- SECRET SAUCE
+      tr {
+        &:first-child {
+          th:first-child {
+            border-top-left-radius: $table-border-radius;
+          }
+
+          th:last-child {
+            border-top-right-radius: $table-border-radius;
+          }
+        }
+
+        &:last-child {
+          td:first-child {
+            border-bottom-left-radius: $table-border-radius;
+          }
+
+          td:last-child {
+            border-bottom-right-radius: $table-border-radius;
+          }
+        }
+      }
+    } @else {
+      border-collapse: collapse;
+    }
+
+
+    //////////////////////////////////////////////////
+    // GENERAL STYLES ////////////////////////////////
+    //////////////////////////////////////////////////
+
+    thead {
+
+    }
+
+    th {
+      //////////////////////////////////////////////////
+      // TABLE HEADER //////////////////////////////////
+      //////////////////////////////////////////////////
+      background-color: $th-background;
+      color: $th-color;
+      padding: $table-padding;
+
+      text-align: left;
+    }
+
+    tr {
+      //////////////////////////////////////////////////
+      // TABLE ROWS ////////////////////////////////////
+      //////////////////////////////////////////////////
+      background: $table-background;
+      padding: $table-padding;
+    }
+
+    td {
+      //////////////////////////////////////////////////
+      // TABLE DATA ////////////////////////////////////
+      //////////////////////////////////////////////////
+      padding: $table-padding;
+      text-align: left;
+
+
+
+    }
+
+    @if $table-is-striped {
+      //////////////////////////////////////////////////
+      // ADD STRIPES TO TABLE //////////////////////////
+      //////////////////////////////////////////////////
+      tr:nth-child(odd) {
+        /*  Define the background color for all the ODD background rows  */
+        background: $table-background;
+
+        @if $table-row-stripe-hover {
+
+          &:hover {
+            background-color: lighten($table-background, 1%);
+          }
+        }
+
+      }
+
+      tr:nth-child(even) {
+        /*  Define the background color for all the EVEN background rows  */
+        background: $table-striped-background;
+
+        @if $table-row-stripe-hover {
+          &:hover {
+            background-color: lighten(darken($table-background, $table-color-scale), 1%);
+          }
+        }
+      }
+
+    }
+
+    //////////////////////////////////////////////////
+    // BORDERS ///////////////////////////////////////
+    //////////////////////////////////////////////////
+    th {
+      border: $th-border;
+      border-style: $th-border-style;
+      //border-bottom: $th-border;
+      //border-left: $th-border;
+    }
+
+    tr {
+
+    }
+
+    td {
+      //////////////////////////////
+      // TABLE DATA ////////////////
+      //////////////////////////////
+      border-bottom: $table-border 1px solid;
+      border-right: $table-border 1px solid;
+
+
+
+
+      &:first-child {
+        border-left: $table-border 1px solid;
+      }
     }
   }
-  /*  Define the background color for all the EVEN background rows  */
-  tr:nth-child(even){
-    background: $background--even;
-    &:hover {
-      background-color: transparentize($background--even, 0.2);
-    }
+
+}
+
+
+
+//.table-01 {
+//  @include table-01(
+//          $th-background: #362F4B, // 1
+//          $th-color: #CAC5D5, // 2
+//          $table-padding: 0.5em 2em, // 3
+//          $table-border-radius: 10px
+//  );
+//}
+
+.table-01 {
+  @include table-01(
+          $th-background: #FFFFFF, // 1
+          $th-color: #000000, // 2
+          $table-padding: 0.5em 2em, // 3
+            //$table-border-radius: 10px
+          $table-is-striped: false,
+          $table-background: #FFFFFF,
+          //$table-border: green, //$th-border: #000 1px solid,
+          $th-border: 1px solid #BBBBBB,
+          $table-border-style: hidden hidden solid,
+          $th-border-style: hidden hidden solid,
+  $table-is-fixed: false,
+  );
+
+
+  td:nth-child(1) {
+    width: 35%;
   }
+
+  th {
+    border-bottom: 1px solid red;
+  }
+
+}
+
+@mixin triangle($size, $color, $direction) {
+  height: 0;
+  width: 0;
+
+  border-color: transparent;
+  border-style: solid;
+  border-width: $size / 2;
+
+  @if $direction == up {
+    border-bottom-color: $color;
+  } @else if $direction == right {
+    border-left-color: $color;
+  } @else if $direction == down {
+    border-top-color: $color;
+  } @else if $direction == left {
+    border-right-color: $color;
+  } @else {
+    @error "Unknown direction #{$direction}.";
+  }
+}
+
+.next {
+  border: 5px;
+  border-color: red;
+  border-style: solid dotted;
+  height: 50px;
 }

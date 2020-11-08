@@ -21,37 +21,3 @@
   }
 }
 
-
-@mixin table-00 (
-  $background--odd: $col-gray-100,
-  $background--even: $col-gray-300,
-  $border: $col-black
-)
-{
-  width:100%;
-  border-collapse:collapse;
-
-
-  td{
-    padding:7px;
-    border: $border 1px solid;
-  }
-  /* provide some minimal visual accomodation for IE8 and below */
-  tr{
-    background: $background--odd;
-  }
-  /*  Define the background color for all the ODD background rows  */
-  tr:nth-child(odd){
-    background: $background--odd;
-    &:hover {
-      background-color: transparentize($background--odd, 0.2);
-    }
-  }
-  /*  Define the background color for all the EVEN background rows  */
-  tr:nth-child(even){
-    background: $background--even;
-    &:hover {
-      background-color: transparentize($background--even, 0.2);
-    }
-  }
-}
