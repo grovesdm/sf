@@ -1,6 +1,6 @@
 @use '../../vars' as *;
 
-@mixin colors($_bg: $col-white, $_fg: $col-black, $_links: $_fg){
+@mixin sf-colors($_bg: $col-white, $_fg: $col-black, $_links: $_fg){
   background-color: $_bg;
   color: $_fg;
   a {
@@ -8,10 +8,10 @@
   }
 
   //EXPERIMENTAL
-  &:active,
-  &:hover {
-    background-color: $_bg;
-    color: $_fg;
-  }
+  //&:active,
+  //&:hover {
+  //  background-color: $_bg;
+  //  color: $_fg;
+  //}
 
 }

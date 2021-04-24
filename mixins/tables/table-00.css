@@ -1,7 +1,5 @@
 .table-00 {
-  padding: 2em 0;
   overflow: auto;
-  width: 100%;
 }
 
 .table-00 table {
@@ -17,7 +15,7 @@
 }
 
 .table-00 table th {
-  background-color: #BEE3F8;
+  background-color: #EBF8FF;
   color: #000000;
   padding: 0.25em 0.5em;
   text-align: left;
@@ -33,21 +31,19 @@
   text-align: left;
 }
 
-.table-00 table tr:nth-child(odd) {
-  /*  Define the background color for all the ODD background rows  */
+.table-00 table tr:nth-child(even) {
   background: #EBF8FF;
 }
 
-.table-00 table tr:nth-child(odd):hover {
+.table-00 table tr:nth-child(even):hover {
   background-color: #f0faff;
 }
 
-.table-00 table tr:nth-child(even) {
-  /*  Define the background color for all the EVEN background rows  */
+.table-00 table tr:nth-child(odd) {
   background: #BEE3F8;
 }
 
-.table-00 table tr:nth-child(even):hover {
+.table-00 table tr:nth-child(odd):hover {
   background-color: #c3e5f8;
 }
 

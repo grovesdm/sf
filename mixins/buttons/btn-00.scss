@@ -2,26 +2,26 @@
 @use "_index" as *;
 
 .btn-00 {
-  @include btn;
+  @include sf-btn;
 
   &--primary {
-    @include btn-00($col-black, $col-white);
+    @include sf-btn-00($col-black, $col-white);
   }
 
   &--secondary {
-    @include btn-00($col-gray-800, $col-white);
+    @include sf-btn-00($col-gray-800, $col-white);
   }
 
   &--success {
-    @include btn-00($col-success, $col-white);
+    @include sf-btn-00($col-success, $col-white);
   }
 
   &--warning {
-    @include btn-00($col-warning, $col-white);
+    @include sf-btn-00($col-warning, $col-white);
   }
 
   &--alert {
-    @include btn-00($col-alert, $col-white);
+    @include sf-btn-00($col-alert, $col-white);
   }
 }
 

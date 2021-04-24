@@ -1,8 +1,6 @@
 .table-01 {
   font-size: 90%;
-  padding: 2em 0;
   overflow: auto;
-  width: 100%;
 }
 
 .table-01 table {
@@ -35,7 +33,6 @@
 }
 
 .table-01 table tr:nth-child(odd) {
-  /*  Define the background color for all the ODD background rows  */
   background: transparent;
 }
 
@@ -44,7 +41,6 @@
 }
 
 .table-01 table tr:nth-child(even) {
-  /*  Define the background color for all the EVEN background rows  */
   background: #FFFAF0;
 }
 

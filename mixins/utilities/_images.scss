@@ -1,6 +1,6 @@
 
 
-@mixin image-clip($clip:"", $amount: 96%) {
+@mixin sf-image-clip($clip:"", $amount: 96%) {
   @if $clip == 'bottom-left' {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 $amount) //<-- USE ON IMG CLASS - CLIP START
   } @else if $clip == 'bottom-right'{

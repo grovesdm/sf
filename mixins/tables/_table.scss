@@ -25,7 +25,7 @@
   }
 }
 
-@mixin table(/////////////////////////
+@mixin sf_table(/////////////////////////
   // CONFIG ///////////////
   /////////////////////////
   $column-width-fixed: false, //<-- SETS COLUMNS TO ALL EQUAL WIDTH
@@ -65,11 +65,10 @@
   //////////////////////////////////////////////////
   // TABLE CONTAINER STYLING ///////////////////////
   //////////////////////////////////////////////////
-  padding: 2em 0;
-  //  //SET WIDTH AND HEIGHT OF CONTAINER TO ENABLE SCROLL
+  //SET WIDTH AND HEIGHT OF CONTAINER TO ENABLE SCROLL
+  //width: 100%;
+  //height: 200px;
   overflow: auto; //<-- ENABLE SCROLL
-  width: 100%;
-  //  //height: 200px;
 
   table {
     min-width: 100%;
@@ -157,22 +156,16 @@
       // ADD STRIPES TO TABLE //////////////////////////
       //////////////////////////////////////////////////
       tr:nth-child(odd) {
-        /*  Define the background color for all the ODD background rows  */
         background: $table-background;
-
         @if $table-row-hover {
-
           &:hover {
             background-color: lighten($table-background, 1%);
           }
         }
-
       }
 
       tr:nth-child(even) {
-        /*  Define the background color for all the EVEN background rows  */
         background: $table-row-striped-background;
-
         @if $table-row-hover {
           &:hover {
             background-color: lighten($table-row-striped-background, 1%);
@@ -180,6 +173,24 @@
         }
       }
 
+    } @else if $table-stripes == odd {
+      tr:nth-child(even) {
+        background: $table-background;
+        @if $table-row-hover {
+          &:hover {
+            background-color: lighten($table-background, 1%);
+          }
+        }
+      }
+
+      tr:nth-child(odd) {
+        background: $table-row-striped-background;
+        @if $table-row-hover {
+          &:hover {
+            background-color: lighten($table-row-striped-background, 1%);
+          }
+        }
+      }
     }
 
     //////////////////////////////////////////////////

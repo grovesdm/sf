@@ -2,6 +2,7 @@
 @use "_index" as *;
 
 
+
 .table-00 {
   @include table(
     // CONFIG ///////////////
@@ -9,7 +10,7 @@
           $column-width-fixed: false, //<-- SETS COLUMNS TO ALL EQUAL WIDTH
           $table-width: 1014px, // SET TABLE WIDTH
           $table-padding: 0.25em 0.5em, // PADDING FOR TEXT INSIDE TABLE CELLS
-          $table-stripes: even, // odd || even || null
+          $table-stripes: odd, // odd || even || null
             //$table-stack-breakpoint
             //$show-header-for-stacked
 
@@ -18,7 +19,7 @@
             /////////////////////////
           $table-background: $col-blue-100,
           $table-color: $col-black,
-          $th-background: $col-blue-200,
+          $th-background: $col-blue-100,
           $th-color: $col-black,
           $table-row-hover: true, // true || false TABLE MOUSE HOVER EFFECT
           $table-row-striped-background: $col-blue-200,

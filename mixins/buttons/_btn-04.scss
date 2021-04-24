@@ -1,7 +1,7 @@
 @use "../../vars" as *;
 @use "btn" as *;
 
-@mixin btn-04(
+@mixin sf-btn-04(
   $bg: $col-black,
   $fg: $col-white,
   $bg-page: $col-white

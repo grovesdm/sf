@@ -42,6 +42,6 @@
 //}
 
 @mixin hidden-on-phone-lg-p {
-  @include media('<=phone-lg-p');
+  @include sf-media('<=phone-lg-p');
   display: none;
 }
